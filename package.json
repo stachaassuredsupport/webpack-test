@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack --mode development --watch"
+  },
+  "devDependencies": {
+    "webpack-cli": "^5.0.1"
+  }
+}
