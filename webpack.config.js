@@ -1,4 +1,5 @@
 const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
 	//if there mode is "production" the code in the output file is less readable, but it is very short
@@ -22,8 +23,14 @@ module.exports = {
 					"style-loader",
 					"css-loader",
 					"sass-loader",
-				]
+				],
 			},
 		],
 	},
+	plugins: [
+		new HtmlWebpackPlugin({
+			title: "Webpack dummy site",
+			filename: "index.thml",
+		}),
+	],
 };
