@@ -1,5 +1,5 @@
 function generateJoke() {
-  const joke = "This is funny";
+  const joke = "This is too funny";
   return joke;
 }
 
