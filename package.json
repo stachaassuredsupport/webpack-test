@@ -1,7 +1,8 @@
 {
 	"scripts": {
 		"build": "webpack",
-		"watch": "webpack"
+		"watch": "webpack",
+		"dev": "webpack serve"
 	},
 	"devDependencies": {
 		"css-loader": "^6.7.3",
@@ -11,7 +12,8 @@
 		"sass-loader": "^13.2.1",
 		"style-loader": "^3.3.2",
 		"webpack": "^5.76.2",
-		"webpack-cli": "^5.0.1"
+		"webpack-cli": "^5.0.1",
+		"webpack-dev-server": "^4.13.1"
 	},
 	"name": "webpack-trial",
 	"version": "1.0.0",
