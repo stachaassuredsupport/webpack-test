@@ -11,7 +11,8 @@ module.exports = {
 	output: {
 		path: path.resolve(__dirname, "dist"),
 		//[name] is reffering to the name in the entry part. Right now it is "bundle_custom" see line 6"
-		filename: "[name].js",
+		// [contenthash] is generating a new id number and add it to the file name every time, when npm build is run
+		filename: "[name] [contenthash].js",
 	},
 	module: {
 		//rules for different type of files - that ends with the same extension
@@ -27,10 +28,13 @@ module.exports = {
 			},
 		],
 	},
+
+	//plugin, installed via npm earlier, that generated an HTML file 
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: "Webpack dummy site",
-			filename: "index.thml",
+			filename: "index.html",
+			template: 'src/template.html'
 		}),
 	],
 };

@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap");
 
-$primary-color: blue;
-$secondary-color: grey;
-$box-shadow: 0 10px 20px black, 0 6px 6px black;
+$primary-color: rgb(165, 201, 218);
+$secondary-color: rgb(238, 235, 235);
+$box-shadow: 0 10px 20px rgba(55, 51, 62, 0.312), 0 6px 6px rgb(55, 51, 62, 0.31);
 
 * {
 	box-sizing: border-box;
