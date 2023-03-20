@@ -13,8 +13,11 @@ module.exports = {
 		//[name] is reffering to the name in the entry part. Right now it is "bundle_custom" see line 6"
 		// [contenthash] is generating a new id number and add it to the file name every time, when npm build is run
 		filename: "[name][contenthash].js",
+		//clean - removing old files in the dist folder when run build command
 		clean: true,
 	},
+	//source-map is a tool for debugging - to see the source code
+	devtool: "source-map",
 	devServer: {
 		static: {
 			directory: path.resolve(__dirname, "dist"),
