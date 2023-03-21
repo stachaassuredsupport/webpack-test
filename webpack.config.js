@@ -15,6 +15,7 @@ module.exports = {
 		filename: "[name][contenthash].js",
 		//clean - removing old files in the dist folder when run build command
 		clean: true,
+		assetModuleFilename: "[name] [ext]",
 	},
 	//source-map is a tool for debugging - to see the source code
 	devtool: "source-map",
@@ -39,6 +40,20 @@ module.exports = {
 					"css-loader",
 					"sass-loader",
 				],
+			},
+			{
+				test: /\.js$/,
+				exclude: /node_modules/,
+				use: {
+					loader: "babel-loader",
+					options: {
+						presets: ["@babel/preset-env"],
+					},
+				},
+			},
+			{
+				test: /\.(png|jpg|jpeg|gif|svg)$/i,
+				type: "asset/resource",
 			},
 		],
 	},
